@@ -7,6 +7,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
+/*функция-декоратор @Component, ассоциирует метаданные с классом компонента AppComponent.
+В этой функции, во-первых, определяется параметр selector или селектор css для HTML-элемента, который
+будет представлять компонент. Во-вторых, здесь определяется параметр template или шаблон, который указывает, как надо визуализировать компонент.
+
+В этом шаблоне задана двусторонняя привязка с помощью выражений [(ngModel)]="name" и {{name}} к некоторой модели name.*/
 var AppComponent = (function () {
     function AppComponent() {
         this.name = '';
@@ -16,7 +21,7 @@ var AppComponent = (function () {
 AppComponent = __decorate([
     core_1.Component({
         selector: 'my-app',
-        template: "<label>\u0412\u0432\u0435\u0434\u0438\u0442\u0435 \u0438\u043C\u044F:</label>\n    <input [(ngModel)]=\"name\" placeholder=\"name\">\n    <h1>\u0414\u043E\u0431\u0440\u043E \u043F\u043E\u0436\u0430\u043B\u043E\u0432\u0430\u0442\u044C {{name}}!</h1>"
+        templateUrl: "main.html",
     })
 ], AppComponent);
 exports.AppComponent = AppComponent;
